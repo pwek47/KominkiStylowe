@@ -1,0 +1,1 @@
+Wgraj swoje zdjęcia do folderu images i partnerów do partners. Następnie wrzuć całość na GitHub.
