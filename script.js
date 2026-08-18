@@ -1,0 +1,1 @@
+document.querySelectorAll(".card").forEach(c=>c.addEventListener("mouseenter",()=>c.style.boxShadow="0 0 30px rgba(200,155,60,.4)"));
