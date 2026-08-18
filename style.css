@@ -23,11 +23,11 @@ body{
     min-height:100vh;
 
     background:
-    linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.65)
-    ),
-    url("images/hero.jpg");
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.65)
+        ),
+        url("images/hero.jpg");
 
     background-position:center;
     background-size:cover;
@@ -43,6 +43,8 @@ body{
 
 .logo img{
     height:70px;
+    width:auto;
+    display:block;
 }
 
 .menu{
