@@ -38,11 +38,6 @@ Po zmianie `style.css` lub `script.js` podnieś numer wersji w linkach we wszyst
 (np. `style.css?v=3` → `?v=4`). GitHub Pages pozwala przeglądarkom trzymać pliki przez 10 minut – bez tego
 część odwiedzających zobaczy nowy HTML ze starym wyglądem.
 
-## Domena, hosting i przeniesienie z Wix
-
-Gdzie działa strona, rekordy DNS (w tym poczty Forpsi), przeniesienie domeny kominkistylowe.pl z Wix na GitHub Pages
-i lista przekierowań starych adresów: **[docs/domena-i-hosting.md](docs/domena-i-hosting.md)**.
-
 ## Formularz kontaktowy – ważne przy uruchomieniu
 
 Formularz wysyła wiadomości bezpośrednio na **biuro@kominkistylowe.pl** przez darmową usługę
