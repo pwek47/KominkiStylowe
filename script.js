@@ -107,38 +107,54 @@ document.documentElement.classList.add("js");
     });
   }
 
-  /* Formularz kontaktowy – walidacja i wysyłka przez klienta poczty */
+  /* Formularz kontaktowy – walidacja i wysyłka na biuro@kominkistylowe.pl (FormSubmit) */
   const form = document.getElementById("contact-form");
   if (form) {
     const statusEl = document.getElementById("form-status");
-    form.addEventListener("submit", (e) => {
+    const submitBtn = document.getElementById("form-submit");
+    const setStatus = (type, text) => { statusEl.className = "form-status " + type; statusEl.textContent = text; };
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       let valid = true;
-      form.querySelectorAll("input, textarea, select").forEach((f) => {
+      form.querySelectorAll("input:not([type=hidden]), textarea, select").forEach((f) => {
+        if (f.name === "_honey") return;
         const ok = f.checkValidity();
         f.classList.toggle("invalid", !ok && f.type !== "checkbox");
+        f.setAttribute("aria-invalid", String(!ok));
         if (!ok) valid = false;
       });
       if (!valid) {
-        statusEl.className = "form-status error";
-        statusEl.textContent = "Uzupełnij wymagane pola (oznaczone *) i zaakceptuj zgodę.";
+        setStatus("error", "Uzupełnij wymagane pola (oznaczone *) i zaakceptuj zgodę.");
         form.querySelector(":invalid")?.focus();
         return;
       }
-      const d = new FormData(form);
-      const body =
-        `Imię i nazwisko: ${d.get("imie")}\n` +
-        `Telefon: ${d.get("telefon")}\n` +
-        `E-mail: ${d.get("email") || "-"}\n` +
-        `Adres: ${d.get("adres") || "-"}\n` +
-        `Preferowany termin wizyty: ${d.get("termin") || "-"}\n` +
-        `Temat: ${d.get("temat")}\n\n` +
-        `${d.get("wiadomosc")}`;
-      const subject = `Zapytanie ze strony – ${d.get("temat")}`;
-      window.location.href =
-        `mailto:biuro@kominkistylowe.pl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      statusEl.className = "form-status ok";
-      statusEl.textContent = "Otwieramy Twój program pocztowy z gotową wiadomością. Jeśli się nie otworzył – zadzwoń: 606 956 523.";
+
+      const data = new FormData(form);
+      const topic = data.get("Temat");
+      data.set("_subject", `Zapytanie ze strony: ${topic} – ${data.get("Imię i nazwisko")}`);
+      if (!data.get("email")) data.delete("email");
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Wysyłanie…";
+      setStatus("", "");
+      try {
+        const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: data,
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || String(json.success) === "false") throw new Error(json.message || res.status);
+        form.reset();
+        form.querySelectorAll(".invalid").forEach((f) => f.classList.remove("invalid"));
+        setStatus("ok", "Dziękujemy! Wiadomość została wysłana. Odpowiemy najszybciej, jak to możliwe.");
+      } catch (err) {
+        setStatus("error", "Nie udało się wysłać wiadomości. Zadzwoń: 606 956 523 lub napisz na biuro@kominkistylowe.pl.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Wyślij zapytanie";
+      }
     });
   }
 
@@ -157,11 +173,11 @@ document.documentElement.classList.add("js");
   }));
   document.querySelectorAll(".gallery-wide").forEach((el) => (el.dataset.wide = "1"));
 
-  /* "Porozmawiajmy!" – chowamy przycisk przy sekcji kontaktu */
-  const chat = document.querySelector(".chat-fab");
+  /* Przycisk "Zadzwoń" – chowamy go przy sekcji kontaktu, żeby nie zasłaniał formularza */
+  const fab = document.querySelector(".call-fab");
   const contact = document.getElementById("kontakt");
-  if (chat && contact && "IntersectionObserver" in window) {
-    new IntersectionObserver(([e]) => chat.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0.1 }).observe(contact);
+  if (fab && contact && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => fab.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0.05 }).observe(contact);
   }
 
   /* Rok w stopce */
