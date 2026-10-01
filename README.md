@@ -18,17 +18,30 @@ Statyczna strona firmy **Kominki Stylowe** (Starachowice). Czysty HTML/CSS/JS �
 
 ## Jak dodać zdjęcia realizacji
 
-1. Wgraj zdjęcia (najlepiej `.jpg`, ok. 1600 px szerokości, < 400 KB) do `images/realizacje/`.
-2. W `index.html`, w sekcji `#realizacje`, zamień w wybranym `<figure>`:
+1. Przygotuj zdjęcie: `.jpg`, maks. 1600 px szerokości, poniżej ~300 KB, bez danych EXIF (mogą zawierać lokalizację GPS).
+   Nazwa pliku opisowa, z prefiksem kategorii, np. `nowoczesne-szyba-narozna.jpg`. Wgraj do `images/realizacje/`.
+2. W `index.html`, w sekcji `#realizacje`, dodaj nowy `<figure>` w grupie swojej kategorii
+   (kolejność: nowoczesne, klasyczne, stylowe, rustykalne):
    ```html
-   <div class="ph ph-1" aria-hidden="true"></div>
+   <figure class="gallery-item reveal" data-category="nowoczesne">
+     <img src="images/realizacje/nazwa.jpg" alt="Krótki opis kominka po polsku" loading="lazy" width="1600" height="1200">
+     <figcaption>Kominek nowoczesny · krótki podpis</figcaption>
+   </figure>
    ```
-   na:
-   ```html
-   <img src="images/realizacje/nazwa.jpg" alt="Krótki opis kominka" loading="lazy">
-   ```
+   `width` i `height` to rzeczywiste wymiary pliku. Pierwsze zdjęcie ma klasę `gallery-wide` (duży kafel) – najlepiej poziome.
 3. Atrybut `data-category` (`stylowe`, `rustykalne`, `nowoczesne`, `klasyczne`) decyduje o filtrze.
    Kliknięte zdjęcie otwiera się w podglądzie.
+
+## Zmiany w CSS i JS
+
+Po zmianie `style.css` lub `script.js` podnieś numer wersji w linkach we wszystkich plikach `.html`
+(np. `style.css?v=3` → `?v=4`). GitHub Pages pozwala przeglądarkom trzymać pliki przez 10 minut – bez tego
+część odwiedzających zobaczy nowy HTML ze starym wyglądem.
+
+## Domena, hosting i przeniesienie z Wix
+
+Gdzie działa strona, rekordy DNS (w tym poczty Forpsi), przeniesienie domeny kominkistylowe.pl z Wix na GitHub Pages
+i lista przekierowań starych adresów: **[docs/domena-i-hosting.md](docs/domena-i-hosting.md)**.
 
 ## Formularz kontaktowy – ważne przy uruchomieniu
 
