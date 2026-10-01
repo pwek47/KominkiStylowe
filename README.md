@@ -1,6 +1,6 @@
 # Kominki Stylowe – strona www
 
-Statyczna strona firmy **Kominki Stylowe Marek Wiśniewski** (Starachowice). Czysty HTML/CSS/JS – bez kompilacji, działa na każdym hostingu i na GitHub Pages.
+Statyczna strona firmy **Kominki Stylowe** (Starachowice). Czysty HTML/CSS/JS – bez kompilacji, działa na każdym hostingu i na GitHub Pages.
 
 ## Struktura
 
@@ -64,5 +64,3 @@ w sekcji `#poradnik` w `index.html` i wpis w `sitemap.xml`.
 - RODO: mapa Google ładowana dopiero po kliknięciu, polityka prywatności, zgoda w formularzu,
 - status „Otwarte / Zamknięte” wg godzin otwarcia, przycisk szybkiego dzwonienia na telefonie,
 - wersja mobilna: menu pełnoekranowe, lżejsze zdjęcie tła (`images/hero-mobile.jpg`), obsługa wcięć ekranu iPhone.
-
-Wykonanie: Piotr Wiśniewski

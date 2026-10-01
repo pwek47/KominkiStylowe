@@ -91,13 +91,18 @@ p + p { margin-top: 1rem; }
 .btn-block { width: 100%; }
 .btn-fb { background: #1877f2; color: #fff; box-shadow: 0 10px 30px -10px rgba(24, 119, 242, .6); }
 .btn-fb:hover { background: #166fe0; color: #fff; box-shadow: 0 16px 36px -12px rgba(24, 119, 242, .75); }
-.fb-link {
+.social-link {
   display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
-  background: #1877f2; color: #fff; transition: transform .2s, background .2s;
+  color: #fff; transition: transform .2s, background .2s;
 }
-.fb-link:hover { color: #fff; background: #166fe0; transform: translateY(-2px); }
-.fb-link svg { width: 20px; height: 20px; }
-.fb-link-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.social-link:hover { transform: translateY(-2px); }
+.social-link svg { width: 20px; height: 20px; }
+.social-link-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fb-link { background: #1877f2; }
+.fb-link:hover { color: #fff; background: #166fe0; }
+.maps-link { background: #fff; color: #1f1f1f; }
+.maps-link:hover { color: #1f1f1f; background: #f1f1f1; }
+.social-links { display: flex; gap: .6rem; }
 .gallery-more { margin-top: 2.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.5rem; text-align: center; }
 .gallery-more p { color: var(--muted); margin: 0; }
 
@@ -431,11 +436,17 @@ p + p { margin-top: 1rem; }
   .site-nav ul { gap: 1.1rem; }
 }
 
+@media (min-width: 901px) and (max-width: 1100px) {
+  .site-nav ul a, .brand { white-space: nowrap; }
+  /* ciasny nagłówek: sam telefon jako ikona, numer zostaje dla czytników ekranu */
+  .site-nav .btn-small { font-size: 0; gap: 0; padding: .6rem; }
+  .site-nav .btn-small svg { width: 20px; height: 20px; }
+}
+
 @media (min-width: 901px) and (max-width: 1000px) {
   .site-nav { gap: .9rem; }
   .site-nav ul { gap: .8rem; }
   .site-nav ul a { font-size: .9rem; }
-  .site-nav .btn-small { padding: .55rem .9rem; font-size: .88rem; }
   .brand { font-size: 1.05rem; }
 }
 
@@ -456,8 +467,9 @@ p + p { margin-top: 1rem; }
   .site-nav ul a::after { display: none; }
   .site-nav ul a.active { color: var(--accent); }
   .site-nav .btn { font-size: 1.05rem; padding: .9rem 1.6rem; }
-  .site-nav .fb-link { display: inline-flex; gap: .55rem; width: auto; height: auto; padding: .9rem 1.6rem; border-radius: 999px; font-weight: 600; font-size: 1.05rem; }
-  .site-nav .fb-link-text { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .site-nav .social-link { display: inline-flex; gap: .55rem; width: auto; height: auto; padding: .9rem 1.6rem; border-radius: 999px; font-weight: 600; font-size: 1.05rem; }
+  .site-nav .social-links { flex-wrap: wrap; justify-content: center; gap: .75rem; }
+  .site-nav .social-link-text { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
   body.nav-open { overflow: hidden; }
   .brand { font-size: 1.05rem; }
   .brand img { width: 38px; height: 38px; }
