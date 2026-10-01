@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="images/hero.jpg" media="(min-width: 601px)">
   <link rel="preload" as="image" href="images/hero-mobile.jpg" media="(max-width: 600px)">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 
   <!-- Dane strukturalne dla Google (wizytówka lokalna) -->
   <script type="application/ld+json">
@@ -55,7 +55,8 @@
       "addressRegion": "świętokrzyskie",
       "addressCountry": "PL"
     },
-    "areaServed": ["Starachowice i okolice", "województwo świętokrzyskie"],
+    "areaServed": ["Starachowice", "Skarżysko-Kamienna", "Ostrowiec Świętokrzyski", "Wąchock", "Iłża", "Kielce", "województwo świętokrzyskie"],
+    "geo": { "@type": "GeoCoordinates", "latitude": 51.0088471, "longitude": 21.1085883 },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" }
@@ -112,8 +113,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-bg" role="img" aria-label="Nowoczesny piec kominkowy w przestronnym salonie"></div>
       <div class="container hero-content">
-        <p class="eyebrow">Kominki Stylowe · Starachowice i okolice</p>
-        <h1 id="hero-title">Kominki, które stają się <em>sercem domu</em></h1>
+        <h1 id="hero-title"><span class="eyebrow">Kominki Stylowe · Starachowice i okolice</span> Kominki, które stają się <em>sercem domu</em></h1>
         <p class="lead">Projektujemy, budujemy i montujemy kominki nowoczesne, klasyczne, rustykalne i stylowe. Od pierwszego pomiaru po pierwsze rozpalenie – wszystko w jednych rękach.</p>
         <div class="hero-actions">
           <a href="#kontakt" class="btn">Umów bezpłatną konsultację</a>
@@ -186,21 +186,25 @@
             <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><rect x="6" y="11" width="12" height="6"/></svg></div>
             <h3>Kominki nowoczesne</h3>
             <p>Minimalistyczne bryły, wkłady z dużą szybą, obudowy z betonu architektonicznego, spieku lub stali. Idealne do otwartych przestrzeni.</p>
+            <a class="article-more" href="kominki-nowoczesne.html">Zobacz kominki nowoczesne →</a>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 6h20M4 6v14M20 6v14M8 20v-8a4 4 0 0 1 8 0v8M2 20h20"/></svg></div>
             <h3>Kominki klasyczne</h3>
             <p>Ponadczasowe portale z marmuru i kamienia, symetria i szlachetne proporcje, które dodają wnętrzu elegancji.</p>
+            <a class="article-more" href="kominki-klasyczne.html">Zobacz kominki klasyczne →</a>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8h18M5 8v12M19 8v12M3 20h18M7 4h10l2 4H5z"/><path d="M12 18c-2 0-3-1.3-3-3 0-1.5 1.5-2.5 3-4.5 1.5 2 3 3 3 4.5 0 1.7-1 3-3 3z"/></svg></div>
             <h3>Kominki rustykalne</h3>
             <p>Naturalny kamień, cegła i belki z litego drewna. Ciepły, swojski charakter – jak w górskiej chacie.</p>
+            <a class="article-more" href="kominki-rustykalne.html">Zobacz kominki rustykalne →</a>
           </article>
           <article class="card card-featured reveal">
             <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg></div>
             <h3>Kominki stylowe <span class="tag">nasza specjalność</span></h3>
             <p>Bogate zdobienia, rzeźbione detale i indywidualnie projektowane obudowy, które nadają wnętrzu niepowtarzalny charakter.</p>
+            <a class="article-more" href="kominki-stylowe.html">Zobacz kominki stylowe →</a>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22c-4 0-7-2.7-7-6.5C5 11 9 9 12 3c1 3 3 4.5 4 6 1.3 1.9 3 3.8 3 6.5 0 3.8-3 6.5-7 6.5z"/></svg></div>
@@ -221,7 +225,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Realizacje</p>
-          <h2 id="realizacje-title">Wybrane projekty</h2>
+          <h2 id="realizacje-title">Realizacje kominków – Starachowice i okolice</h2>
           <p>Kominki nowoczesne, klasyczne, stylowe i rustykalne. Zdjęcia z bieżących realizacji zamieszczamy na naszym profilu na <a href="https://www.facebook.com/StyloweKominki/" target="_blank" rel="noopener noreferrer">Facebooku</a> – zapraszamy!</p>
         </div>
 
@@ -425,8 +429,8 @@
             <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
             <div>
               <strong>Kominki Stylowe w Google</strong>
-              <!-- Usuń atrybut hidden i wpisz aktualną ocenę oraz liczbę opinii z wizytówki Google -->
-              <p class="rating" hidden><span class="stars" aria-hidden="true">★★★★★</span> <b>0,0</b> · 0 opinii</p>
+              <!-- Ocena i liczba opinii z wizytówki Google (stan: październik 2026) – aktualizuj co jakiś czas -->
+              <p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> <b>4,6</b> / 5 · 17 opinii</p>
               <p class="rating-note">Opinie prawdziwych klientów w wizytówce Google</p>
             </div>
             <div class="google-actions">
@@ -448,7 +452,18 @@
 
           Dopóki lista jest pusta, sekcja pokazuje tylko kartę Google powyżej.
         -->
-        <div class="reviews"></div>
+        <div class="reviews">
+          <figure class="review reveal">
+            <div class="stars" aria-label="Ocena 5 na 5">★★★★★</div>
+            <blockquote>Bardzo polecam tę firmę. Właściciel zajął się nami kompleksowo, dobrał świetny kominek do naszych potrzeb. Zamówienie przebiegło błyskawicznie, a montaż profesjonalnie. Otrzymaliśmy także mnóstwo porad o samym paleniu w kominku oraz drewnie, którego należy używać.</blockquote>
+            <figcaption><strong>Katarzyna W.</strong> · Google</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="stars" aria-label="Ocena 5 na 5">★★★★★</div>
+            <blockquote>Wszystko na 5 doradztwo w sprawie kominka szybki i profesjonalny montaż nic dodać nic ująć każdemu szczerze moge polecić</blockquote>
+            <figcaption><strong>Jakub</strong> · Google</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -655,6 +670,10 @@
         <h3>Na skróty</h3>
         <ul>
           <li><a href="#oferta">Oferta</a></li>
+          <li><a href="kominki-nowoczesne.html">Kominki nowoczesne</a></li>
+          <li><a href="kominki-klasyczne.html">Kominki klasyczne</a></li>
+          <li><a href="kominki-stylowe.html">Kominki stylowe</a></li>
+          <li><a href="kominki-rustykalne.html">Kominki rustykalne</a></li>
           <li><a href="#o-nas">O nas</a></li>
           <li><a href="#realizacje">Realizacje</a></li>
           <li><a href="#partnerzy">Partnerzy</a></li>
@@ -679,6 +698,6 @@
     <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
   </a>
 
-  <script src="script.js?v=3" defer></script>
+  <script src="script.js?v=4" defer></script>
 </body>
 </html>

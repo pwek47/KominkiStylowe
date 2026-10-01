@@ -7,12 +7,13 @@ Statyczna strona firmy **Kominki Stylowe** (Starachowice). Czysty HTML/CSS/JS �
 | Plik | Opis |
 |---|---|
 | `index.html` | Strona główna: hero, o nas, salon, oferta, realizacje, jak pracujemy, partnerzy, opinie, poradnik, FAQ, kontakt |
+| `kominki-nowoczesne.html`, `kominki-klasyczne.html`, `kominki-stylowe.html`, `kominki-rustykalne.html` | Strony ofertowe pod wyszukiwania w Google („kominki stylowe Starachowice” itd.) – tekst, zdjęcia z danej kategorii, pytania i odpowiedzi |
 | `poradnik.html`, `poradnik-*.html` | Poradnik kominkowy – lista i 4 artykuły |
 | `dziekujemy.html` | Strona po wysłaniu formularza (gdy przeglądarka ma wyłączony JavaScript) |
 | `polityka-prywatnosci.html` | Polityka prywatności (RODO) |
 | `404.html` | Strona błędu 404 |
 | `kontakt.html` | Przekierowanie na `index.html#kontakt` (zachowuje stare linki) |
-| `galeria.html`, `o-nas.html`, `book-online.html` itd. | Przekierowania ze starych adresów strony Wix na odpowiednie sekcje `index.html` |
+| `galeria.html`, `o-nas.html`, `book-online.html` itd. | Przekierowania ze starych adresów strony Wix na odpowiednie sekcje i strony |
 | `style.css`, `script.js` | Wygląd i interakcje |
 | `robots.txt`, `sitemap.xml`, `site.webmanifest` | SEO i ikona aplikacji |
 
@@ -31,6 +32,8 @@ Statyczna strona firmy **Kominki Stylowe** (Starachowice). Czysty HTML/CSS/JS �
    `width` i `height` to rzeczywiste wymiary pliku. Pierwsze zdjęcie ma klasę `gallery-wide` (duży kafel) – najlepiej poziome.
 3. Atrybut `data-category` (`stylowe`, `rustykalne`, `nowoczesne`, `klasyczne`) decyduje o filtrze.
    Kliknięte zdjęcie otwiera się w podglądzie.
+4. Ten sam `<figure>` (bez klas `reveal` i `gallery-wide`) wklej też do galerii na stronie danej kategorii,
+   np. `kominki-nowoczesne.html` – te strony pomagają w wyszukiwaniu w Google.
 
 ## Zmiany w CSS i JS
 

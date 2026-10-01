@@ -550,3 +550,10 @@ p + p { margin-top: 1rem; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Strony ofertowe (kominki-*.html) ---------- */
+.hero h1 .eyebrow { display: block; font-family: var(--font-sans); line-height: 1.5; }
+.style-gallery { margin-top: 3rem; }
+.style-gallery h2, .style-faq-title { font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 1.25rem; }
+.style-faq-title { margin-top: 3.5rem; }
+.card .article-more { display: inline-block; margin-top: .75rem; }
