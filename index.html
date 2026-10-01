@@ -1,44 +1,481 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kominki Stylowe Premium</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><header class="hero"><nav><div class="logo">KOMINKI STYLOWE</div><ul><li><a href="#about">O nas</a></li><li><a href="#services">Oferta</a></li><li><a href="#projects">Realizacje</a></li><li><a href="#contact">Kontakt</a></li></ul></nav><div class="hero-content"><h1>Tworzymy kominki, które stają się sercem domu</h1><p>Ponad 30 lat doświadczenia w projektowaniu i budowie wyjątkowych kominków.</p><a href="#projects" class="btn">Zobacz realizacje</a></div></header><section id="about" class="section"><h2>Rzemiosło. Design. Doświadczenie.</h2><p>Łączymy tradycyjne wykonawstwo z nowoczesnymi rozwiązaniami premium.</p></section><section id="services" class="section dark"><h2>Specjalizacje</h2><div class="grid"><div class="card">Kominki nowoczesne</div><div class="card">Kominki klasyczne</div><div class="card">Kominki stylowe</div><div class="card">Indywidualne projekty</div><div class="card">Montaż premium</div><div class="card">Kompleksowa realizacja</div></div></section><section id="projects" class="section"><h2>Wybrane realizacje</h2><div class="gallery"><div></div><div></div><div></div><div></div><div></div></div></section><section class="section dark"><h2>Jak pracujemy</h2><div class="steps"><div>01 Konsultacja</div><div>02 Projekt</div><div>03 Wykonanie</div><div>04 Montaż</div><div>05 Opieka</div></div></section><footer id="contact">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kominki Stylowe Starachowice – kominki, wkłady i obudowy od 30 lat</title>
+  <meta name="description" content="Kominki Stylowe – Starachowice, ul. Ostrowiecka 163. Od 30 lat projektujemy i budujemy kominki nowoczesne, klasyczne, rustykalne i stylowe. Pomiar, projekt, obudowa i profesjonalny montaż. Salon ekspozycyjny.">
+  <meta name="keywords" content="kominki Starachowice, kominki stylowe, kominki rustykalne, wkłady kominkowe, obudowy kominkowe, montaż kominków, DGP, płaszcz wodny, Kratki, Spartherm, Romotop, Unico">
+  <meta name="author" content="Kominki Stylowe Marek Wiśniewski">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#14110f">
+  <link rel="canonical" href="https://kominkistylowe.pl/">
 
-    <h2>Kontakt</h2>
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Kominki Stylowe">
+  <meta property="og:title" content="Kominki Stylowe – kominki, które stają się sercem domu">
+  <meta property="og:description" content="30 lat doświadczenia. Projekt, obudowa i montaż kominków w Starachowicach i całym regionie świętokrzyskim.">
+  <meta property="og:url" content="https://kominkistylowe.pl/">
+  <meta property="og:image" content="https://kominkistylowe.pl/images/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <p>Kominki Stylowe</p>
-    <p>Ostrowiecka 163, Starachowice</p>
-    <p>+48 606 956 523</p>
-    <p>biuro@kominkistylowe.pl</p>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="manifest" href="site.webmanifest">
 
-    <div class="social-links">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero.jpg">
+  <link rel="stylesheet" href="style.css">
 
-    <a href="https://www.facebook.com/StyloweKominkitarget="_blank"
-       rel="noopener noreferrer"
-       aria-label="Facebook">
+  <!-- Dane strukturalne dla Google (wizytówka lokalna) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Kominki Stylowe",
+    "legalName": "Kominki Stylowe Marek Wiśniewski",
+    "url": "https://kominkistylowe.pl/",
+    "logo": "https://kominkistylowe.pl/images/logo.png",
+    "image": "https://kominkistylowe.pl/images/hero.jpg",
+    "description": "Projektowanie, budowa i montaż kominków – nowoczesnych, klasycznych, rustykalnych i stylowych. Salon ekspozycyjny w Starachowicach.",
+    "telephone": "+48606956523",
+    "email": "biuro@kominkistylowe.pl",
+    "taxID": "6641465374",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ostrowiecka 163",
+      "addressLocality": "Starachowice",
+      "postalCode": "27-200",
+      "addressRegion": "świętokrzyskie",
+      "addressCountry": "PL"
+    },
+    "areaServed": "województwo świętokrzyskie",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" }
+    ],
+    "hasMap": "https://maps.google.com/?cid=698191495336388782",
+    "sameAs": ["https://www.facebook.com/StyloweKominki/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
 
-        <i class="fab fa-facebook-f"></i>
-        <span>Facebook</span>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Kominki Stylowe – strona główna">
+        <img src="images/logo.png" alt="" width="44" height="44">
+        <span>Kominki <em>Stylowe</em></span>
+      </a>
 
-    </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+      </button>
 
-    ://maps.google.com/?cid=698191495336388782"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Google Maps">
-
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Google Maps</span>
-
-    </a>
-
-</div>
-
-    <div class="map-container">
-
-        <iframe
-            src="https://maps.google.com/maps?q=Kominki%20Stylowe%20Starachowice&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            loading="lazy"
-            allowfullscreen>
-        </iframe>
-
+      <nav id="site-nav" class="site-nav" aria-label="Menu główne">
+        <ul>
+          <li><a href="#o-nas">O nas</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="#partnerzy">Partnerzy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="tel:+48606956523" class="btn btn-small">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          606 956 523
+        </a>
+      </nav>
     </div>
+  </header>
 
-</footer><script src="script.js"></script></body></html>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Nowoczesny piec kominkowy w przestronnym salonie"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Kominki Stylowe · Marek Wiśniewski · Starachowice</p>
+        <h1 id="hero-title">Kominki, które stają się <em>sercem domu</em></h1>
+        <p class="lead">Projektujemy, budujemy i montujemy kominki nowoczesne, klasyczne, rustykalne i stylowe. Od pierwszego pomiaru po pierwsze rozpalenie – wszystko w jednych rękach.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn">Umów bezpłatną konsultację</a>
+          <a href="#realizacje" class="btn btn-ghost">Zobacz realizacje</a>
+        </div>
+        <ul class="hero-badges">
+          <li><strong>30+</strong> lat doświadczenia</li>
+          <li><strong>Salon</strong> ekspozycyjny</li>
+          <li><strong>Pełna</strong> obsługa: od pomiaru po montaż</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- O NAS -->
+    <section id="o-nas" class="section" aria-labelledby="o-nas-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">O nas</p>
+          <h2 id="o-nas-title">Już od 30 lat zajmujemy się budową&nbsp;kominków</h2>
+          <p>W naszej ofercie znajdą Państwo kominki <strong>nowoczesne, rustykalne, klasyczne oraz stylowe</strong>, w których szczególnie się specjalizujemy. Do każdego klienta podchodzimy indywidualnie i oferujemy kompleksowe usługi: od pomiarów, poprzez projekt i wykonanie obudowy, aż po profesjonalny montaż.</p>
+          <p>Dysponujemy kadrą z wieloletnim doświadczeniem i fachową wiedzą zdobytą podczas licznych szkoleń. Do budowy kominków używamy wyłącznie <strong>certyfikowanych materiałów najlepszej jakości</strong>, zapewniających w pełni bezpieczne użytkowanie.</p>
+          <p>Nasze kominki oprócz walorów estetycznych mają również walory użytkowe. Wyposażone w energooszczędne i ekologiczne paleniska, połączone z:</p>
+          <ul class="check-list">
+            <li>systemem <strong>DGP</strong> (dystrybucja gorącego powietrza),</li>
+            <li>techniką wodną (<strong>wkłady z płaszczem wodnym</strong>),</li>
+            <li>techniką <strong>kumulacyjną</strong> (tzw. ciepłe kominki),</li>
+          </ul>
+          <p>mogą służyć do ogrzewania całych domów. Zapewniamy <strong>serwis gwarancyjny i pogwarancyjny</strong> na montowane przez nas urządzenia.</p>
+        </div>
+        <ul class="stats reveal" aria-label="Kominki Stylowe w liczbach">
+          <li><span class="stat-num">30</span><span class="stat-suffix">+</span><span class="stat-label">lat na rynku</span></li>
+          <li><span class="stat-num">4</span><span class="stat-label">style kominków</span></li>
+          <li><span class="stat-num">1</span><span class="stat-label">wykonawca – od projektu po montaż</span></li>
+          <li><span class="stat-num">9</span><span class="stat-label">renomowanych producentów wkładów</span></li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="showroom reveal">
+          <div>
+            <p class="eyebrow">Salon firmowy</p>
+            <h3>Zapraszamy do naszego salonu w Starachowicach, ul. Ostrowiecka 163</h3>
+            <p>Tu można bliżej poznać naszą ofertę, zobaczyć wkłady i obudowy na żywo i zawsze liczyć na fachową poradę w tak ważnej sprawie, jaką jest budowa kominka.</p>
+          </div>
+          <div class="showroom-actions">
+            <a href="#kontakt" class="btn">Umów wizytę</a>
+            <a href="https://maps.google.com/?cid=698191495336388782" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Jak dojechać</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section id="oferta" class="section section-alt" aria-labelledby="oferta-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Oferta</p>
+          <h2 id="oferta-title">Kominek dopasowany do Twojego wnętrza</h2>
+          <p>Niezależnie od stylu domu – zaprojektujemy i wykonamy kominek, który będzie grzał i zachwycał przez lata.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><rect x="6" y="11" width="12" height="6"/></svg></div>
+            <h3>Kominki nowoczesne</h3>
+            <p>Minimalistyczne bryły, wkłady z dużą szybą, obudowy z betonu architektonicznego, spieku lub stali. Idealne do otwartych przestrzeni.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 6h20M4 6v14M20 6v14M8 20v-8a4 4 0 0 1 8 0v8M2 20h20"/></svg></div>
+            <h3>Kominki klasyczne</h3>
+            <p>Ponadczasowe portale z marmuru i kamienia, symetria i szlachetne proporcje, które dodają wnętrzu elegancji.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8h18M5 8v12M19 8v12M3 20h18M7 4h10l2 4H5z"/><path d="M12 18c-2 0-3-1.3-3-3 0-1.5 1.5-2.5 3-4.5 1.5 2 3 3 3 4.5 0 1.7-1 3-3 3z"/></svg></div>
+            <h3>Kominki rustykalne</h3>
+            <p>Naturalny kamień, cegła i belki z litego drewna. Ciepły, swojski charakter – jak w górskiej chacie.</p>
+          </article>
+          <article class="card card-featured reveal">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg></div>
+            <h3>Kominki stylowe <span class="tag">nasza specjalność</span></h3>
+            <p>Bogate zdobienia, rzeźbione detale i indywidualnie projektowane obudowy, które nadają wnętrzu niepowtarzalny charakter.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22c-4 0-7-2.7-7-6.5C5 11 9 9 12 3c1 3 3 4.5 4 6 1.3 1.9 3 3.8 3 6.5 0 3.8-3 6.5-7 6.5z"/></svg></div>
+            <h3>Wkłady kominkowe</h3>
+            <p>Doradzimy i dobierzemy wkład o odpowiedniej mocy – także z płaszczem wodnym i systemem dystrybucji gorącego powietrza (DGP).</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+            <h3>Pomiar, projekt i montaż</h3>
+            <p>Kompleksowa realizacja: pomiar u klienta, wizualizacja, budowa obudowy, podłączenie do komina i serwis po montażu.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REALIZACJE -->
+    <section id="realizacje" class="section" aria-labelledby="realizacje-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Realizacje</p>
+          <h2 id="realizacje-title">Wybrane projekty</h2>
+          <p>Kominki stylowe, rustykalne, nowoczesne i klasyczne. Zdjęcia z bieżących realizacji zamieszczamy na naszym profilu na <a href="https://www.facebook.com/StyloweKominki/" target="_blank" rel="noopener noreferrer">Facebooku</a> – zapraszamy!</p>
+        </div>
+
+        <!--
+          Aby dodać zdjęcia realizacji: wgraj pliki do folderu images/realizacje/
+          i w danym <figure> zamień <div class="ph">…</div> na
+          <img src="images/realizacje/nazwa.jpg" alt="Opis kominka" loading="lazy">
+        -->
+        <div class="filters" role="group" aria-label="Filtruj realizacje">
+          <button type="button" class="filter active" data-filter="all" aria-pressed="true">Wszystkie</button>
+          <button type="button" class="filter" data-filter="stylowe" aria-pressed="false">Stylowe</button>
+          <button type="button" class="filter" data-filter="rustykalne" aria-pressed="false">Rustykalne</button>
+          <button type="button" class="filter" data-filter="nowoczesne" aria-pressed="false">Nowoczesne</button>
+          <button type="button" class="filter" data-filter="klasyczne" aria-pressed="false">Klasyczne</button>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item gallery-wide reveal" data-category="nowoczesne">
+            <img src="images/hero.jpg" alt="Wolnostojący piec kominkowy w nowoczesnym salonie z ceglaną ścianą" loading="lazy" width="1920" height="1080">
+            <figcaption>Piec wolnostojący · nowoczesny loft</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="stylowe">
+            <div class="ph ph-1" aria-hidden="true"></div>
+            <figcaption>Kominek stylowy · portal z kamienia</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="klasyczne">
+            <div class="ph ph-2" aria-hidden="true"></div>
+            <figcaption>Kominek klasyczny · portal marmurowy</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="rustykalne">
+            <div class="ph ph-3" aria-hidden="true"></div>
+            <figcaption>Kominek rustykalny · kamień i drewno</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="nowoczesne">
+            <div class="ph ph-4" aria-hidden="true"></div>
+            <figcaption>Kominek nowoczesny · beton architektoniczny</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK PRACUJEMY -->
+    <section id="jak-pracujemy" class="section section-alt" aria-labelledby="proces-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Jak pracujemy</p>
+          <h2 id="proces-title">Pięć kroków do własnego kominka</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span class="step-num">01</span><h3>Konsultacja</h3><p>Rozmowa w salonie lub telefonicznie – poznajemy Twoje potrzeby, styl wnętrza i budżet.</p></li>
+          <li class="reveal"><span class="step-num">02</span><h3>Pomiar i projekt</h3><p>Przyjeżdżamy na pomiar, sprawdzamy komin i przygotowujemy projekt obudowy.</p></li>
+          <li class="reveal"><span class="step-num">03</span><h3>Wycena</h3><p>Otrzymujesz przejrzysty kosztorys i termin realizacji – bez ukrytych kosztów.</p></li>
+          <li class="reveal"><span class="step-num">04</span><h3>Budowa i montaż</h3><p>Montujemy wkład i wykonujemy obudowę zgodnie ze sztuką i przepisami.</p></li>
+          <li class="reveal"><span class="step-num">05</span><h3>Opieka</h3><p>Pierwsze rozpalenie, instruktaż użytkowania i serwis także po latach.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PARTNERZY -->
+    <section id="partnerzy" class="section partners" aria-labelledby="partnerzy-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Partnerzy</p>
+          <h2 id="partnerzy-title">Jesteśmy przedstawicielem wiodących producentów wkładów kominkowych</h2>
+        </div>
+        <div class="partner-groups reveal">
+          <div>
+            <h3>Producenci polscy</h3>
+            <ul class="partner-list">
+              <li><a href="https://kratki.com/" target="_blank" rel="noopener noreferrer">Kratki.pl</a></li>
+              <li>Hajduk</li>
+              <li>Defro</li>
+              <li><a href="http://www.unico-kominki.com/" target="_blank" rel="noopener noreferrer">Unico</a></li>
+              <li>Hitze</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Producenci zagraniczni</h3>
+            <ul class="partner-list">
+              <li>Spartherm</li>
+              <li>Brunner</li>
+              <li><a href="https://www.romotop.pl/" target="_blank" rel="noopener noreferrer">Romotop</a></li>
+              <li>Edilkamin</li>
+            </ul>
+          </div>
+        </div>
+        <p class="partners-note reveal">Dokumentację techniczną wkładów Kratki znajdziesz w <a href="https://kratki.com/pl/wiedza-i-pomoc/do-pobrania/" target="_blank" rel="noopener noreferrer">strefie do pobrania producenta</a>.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Najczęściej zadawane pytania</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Ile trwa budowa kominka?</summary>
+            <p>Sam montaż i budowa obudowy zajmują zwykle od kilku do kilkunastu dni roboczych – zależnie od wielkości i stopnia skomplikowania projektu. Dokładny termin podajemy przy wycenie.</p>
+          </details>
+          <details>
+            <summary>Czy pomiar i wycena są płatne?</summary>
+            <p>Konsultacja w salonie jest bezpłatna. Warunki pomiaru u klienta ustalamy indywidualnie – zadzwoń, a wszystko wyjaśnimy.</p>
+          </details>
+          <details>
+            <summary>Czy w moim domu da się zamontować kominek?</summary>
+            <p>W większości przypadków tak. Kluczowy jest odpowiedni przewód kominowy i dopływ powietrza. Podczas pomiaru sprawdzimy warunki techniczne i zaproponujemy najlepsze rozwiązanie.</p>
+          </details>
+          <details>
+            <summary>Na jakim obszarze działacie?</summary>
+            <p>Realizujemy kominki w Starachowicach i okolicach – m.in. w Skarżysku-Kamiennej, Ostrowcu Świętokrzyskim, Wąchocku, Iłży i Kielcach – oraz w całym województwie świętokrzyskim.</p>
+          </details>
+          <details>
+            <summary>Jakie wkłady kominkowe montujecie?</summary>
+            <p>Jesteśmy przedstawicielem polskich producentów (Kratki.pl, Hajduk, Defro, Unico, Hitze) oraz zagranicznych (Spartherm, Brunner, Romotop, Edilkamin). Pomożemy dobrać wkład do domu i budżetu.</p>
+          </details>
+          <details>
+            <summary>Czy kominek może ogrzewać cały dom?</summary>
+            <p>Tak – wkład z płaszczem wodnym, system dystrybucji gorącego powietrza (DGP) lub kominek kumulacyjny pozwalają ogrzać cały dom. Dobierzemy moc wkładu do powierzchni i izolacji budynku.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section contact" aria-labelledby="kontakt-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="kontakt-title">Porozmawiajmy o Twoim kominku</h2>
+          <p>Zadzwoń, napisz albo odwiedź nasz salon w Starachowicach.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <ul class="contact-list">
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <div><strong>Adres salonu</strong><address>ul. Ostrowiecka 163<br>27-200 Starachowice</address></div>
+              </li>
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+                <div><strong>Telefon</strong><a href="tel:+48606956523">+48 606 956 523</a></div>
+              </li>
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <div><strong>E-mail</strong><a href="mailto:biuro@kominkistylowe.pl">biuro@kominkistylowe.pl</a></div>
+              </li>
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <div>
+                  <strong>Godziny otwarcia <span class="open-status" id="open-status" hidden></span></strong>
+                  <table class="hours">
+                    <tr data-days="1,2,3,4,5"><th scope="row">Pon – Pt</th><td>9:00 – 18:00</td></tr>
+                    <tr data-days="6"><th scope="row">Sobota</th><td>10:00 – 17:00</td></tr>
+                    <tr data-days="0"><th scope="row">Niedziela</th><td>nieczynne</td></tr>
+                  </table>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-actions">
+              <a class="btn" href="https://maps.google.com/?cid=698191495336388782" target="_blank" rel="noopener noreferrer">Jak dojechać</a>
+              <a class="btn btn-ghost" href="https://www.facebook.com/StyloweKominki/" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="fill"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>
+                Facebook
+              </a>
+            </div>
+
+            <div class="map" id="map">
+              <div class="map-consent">
+                <p>Mapa jest dostarczana przez Google. Po jej wczytaniu Google może zapisać pliki cookie.</p>
+                <button type="button" class="btn btn-small" id="load-map">Pokaż mapę</button>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" action="mailto:biuro@kominkistylowe.pl" method="post" enctype="text/plain" novalidate>
+            <h3>Zapytanie lub rezerwacja wizyty</h3>
+            <div class="field">
+              <label for="f-name">Imię i nazwisko *</label>
+              <input id="f-name" name="imie" type="text" autocomplete="name" required>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-phone">Telefon *</label>
+                <input id="f-phone" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()-]{9,}">
+              </div>
+              <div class="field">
+                <label for="f-email">E-mail</label>
+                <input id="f-email" name="email" type="email" autocomplete="email">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-address">Miejscowość / adres</label>
+                <input id="f-address" name="adres" type="text" autocomplete="street-address">
+              </div>
+              <div class="field">
+                <label for="f-date">Preferowany termin wizyty</label>
+                <input id="f-date" name="termin" type="date">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-type">Temat</label>
+              <select id="f-type" name="temat">
+                <option>Kominek nowoczesny</option>
+                <option>Kominek klasyczny</option>
+                <option>Kominek rustykalny</option>
+                <option>Kominek stylowy</option>
+                <option>Wkład kominkowy</option>
+                <option>Wizyta w salonie / pomiar</option>
+                <option>Serwis gwarancyjny / pogwarancyjny</option>
+                <option>Inne</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-msg">Wiadomość *</label>
+              <textarea id="f-msg" name="wiadomosc" rows="5" required placeholder="Opisz krótko pomieszczenie, preferowany styl i lokalizację."></textarea>
+            </div>
+            <div class="field checkbox">
+              <input id="f-consent" name="zgoda" type="checkbox" required>
+              <label for="f-consent">Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na zapytanie zgodnie z <a href="polityka-prywatnosci.html">polityką prywatności</a>. *</label>
+            </div>
+            <button type="submit" class="btn btn-block">Wyślij zapytanie</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand">
+          <img src="images/logo.png" alt="" width="40" height="40" loading="lazy">
+          <span>Kominki <em>Stylowe</em></span>
+        </a>
+        <p>Projektowanie, budowa i montaż kominków w Starachowicach i województwie świętokrzyskim od ponad 30 lat.</p>
+      </div>
+      <div>
+        <h3>Na skróty</h3>
+        <ul>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#o-nas">O nas</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="#partnerzy">Partnerzy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dane firmy</h3>
+        <p>Kominki Stylowe Marek Wiśniewski<br>ul. Ostrowiecka 163, 27-200 Starachowice<br>NIP: 664-146-53-74</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Kominki Stylowe Marek Wiśniewski · Wykonanie: Piotr Wiśniewski</p>
+      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+    </div>
+  </footer>
+
+  <a href="#kontakt" class="chat-fab">
+    <svg aria-hidden="true" viewBox="0 0 24 24" class="fill"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.4 1.2 4.6 3.1 6.1L4 21l4.2-2.1c1.2.4 2.5.6 3.8.6 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/></svg>
+    <span>Porozmawiajmy!</span>
+  </a>
+  <a href="tel:+48606956523" class="call-fab" aria-label="Zadzwoń: 606 956 523">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

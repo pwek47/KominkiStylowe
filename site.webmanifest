@@ -1,0 +1,9 @@
+{
+  "name": "Kominki Stylowe",
+  "short_name": "Kominki",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#14110f",
+  "theme_color": "#14110f",
+  "icons": [{ "src": "images/logo.png", "sizes": "331x331", "type": "image/png" }]
+}
