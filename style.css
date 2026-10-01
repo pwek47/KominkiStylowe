@@ -89,6 +89,17 @@ p + p { margin-top: 1rem; }
 .btn-ghost:hover { color: var(--text); background: rgba(255,255,255,.08); box-shadow: none; }
 .btn-small { padding: .6rem 1.15rem; font-size: .92rem; }
 .btn-block { width: 100%; }
+.btn-fb { background: #1877f2; color: #fff; box-shadow: 0 10px 30px -10px rgba(24, 119, 242, .6); }
+.btn-fb:hover { background: #166fe0; color: #fff; box-shadow: 0 16px 36px -12px rgba(24, 119, 242, .75); }
+.fb-link {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: #1877f2; color: #fff; transition: transform .2s, background .2s;
+}
+.fb-link:hover { color: #fff; background: #166fe0; transform: translateY(-2px); }
+.fb-link svg { width: 20px; height: 20px; }
+.fb-link-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.gallery-more { margin-top: 2.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.5rem; text-align: center; }
+.gallery-more p { color: var(--muted); margin: 0; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -445,6 +456,8 @@ p + p { margin-top: 1rem; }
   .site-nav ul a::after { display: none; }
   .site-nav ul a.active { color: var(--accent); }
   .site-nav .btn { font-size: 1.05rem; padding: .9rem 1.6rem; }
+  .site-nav .fb-link { display: inline-flex; gap: .55rem; width: auto; height: auto; padding: .9rem 1.6rem; border-radius: 999px; font-weight: 600; font-size: 1.05rem; }
+  .site-nav .fb-link-text { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
   body.nav-open { overflow: hidden; }
   .brand { font-size: 1.05rem; }
   .brand img { width: 38px; height: 38px; }
@@ -484,6 +497,7 @@ p + p { margin-top: 1rem; }
   .card { padding: 1.5rem; }
   .card-icon { width: 46px; height: 46px; margin-bottom: 1rem; }
   .showroom-actions .btn { flex: 1 1 100%; }
+  .gallery-more .btn { width: 100%; }
 
   /* filtry galerii – przewijany pasek */
   .filters { flex-wrap: nowrap; overflow-x: auto; margin-inline: -16px; padding: 0 16px 4px; scrollbar-width: none; }
