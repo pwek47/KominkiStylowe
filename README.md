@@ -12,6 +12,7 @@ Statyczna strona firmy **Kominki Stylowe** (Starachowice). Czysty HTML/CSS/JS �
 | `polityka-prywatnosci.html` | Polityka prywatności (RODO) |
 | `404.html` | Strona błędu 404 |
 | `kontakt.html` | Przekierowanie na `index.html#kontakt` (zachowuje stare linki) |
+| `galeria.html`, `o-nas.html`, `book-online.html` itd. | Przekierowania ze starych adresów strony Wix na odpowiednie sekcje `index.html` |
 | `style.css`, `script.js` | Wygląd i interakcje |
 | `robots.txt`, `sitemap.xml`, `site.webmanifest` | SEO i ikona aplikacji |
 
